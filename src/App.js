@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Person></Person>
+        <Person name="Rubel Nayok"></Person>
         <Person></Person>
         <Person></Person>
         <Person></Person>
@@ -23,14 +23,15 @@ function App() {
   );
 }
 
-function Person(){
+function Person(props){
   const personStyle={
     border: '2px solid red',
     margin: '10px'
   }
+  console.log(props)
   return (
   <div style={personStyle}>
-    <h1>Name: Fuad Hasan</h1>
+    <h1>Name: {props.name}</h1>
     <h3>Valorant</h3>
   </div>
   );
